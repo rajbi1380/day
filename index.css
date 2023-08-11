@@ -1,0 +1,587 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+:root {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+a {
+  color: #cc1616;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e82d2d;
+  text-decoration: none;
+}
+/*navTop*/
+
+.icons i {
+  padding: 11px;
+  line-height: 1px;
+  transition: all 0.3s;
+}
+.icons i:hover {
+  color: #fff;
+}
+.info i {
+  color: red;
+}
+.navTop {
+  background-color: #191919;
+  font-size: 15px;
+  height: 40px;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.navTop .info a {
+  line-height: 0;
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+}
+.navTop .info a:hover {
+  color: #fff;
+}
+@media screen and (max-width: 576px) {
+  .navTop .icons {
+    display: none;
+  }
+  .navTop .info {
+    text-align: center;
+  }
+}
+/*header*/
+#header {
+  background: rgba(25, 25, 25, 0.95);
+  transition: all 0.5s;
+  z-index: 997;
+  height: 70px;
+}
+#header .fixed-top {
+  background: rgba(45, 48, 52, 0.9);
+}
+/* .navbar .offcanvas a {
+  list-style-type: none;
+} */
+.navbar .navbar-brand {
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-nav {
+    height: 70px;
+    text-align: center;
+    line-height: 50px;
+  }
+  .navbar .offcanvas a {
+    color: #fff;
+    margin: 0 10px;
+  }
+  .navbar .offcanvas a:hover {
+    background-color: #cc1616;
+    transition: all 0.5s;
+    height: 70px;
+    color: #444444;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .offcanvas a {
+    color: #000;
+  }
+  .navbar .offcanvas a:hover {
+    color: #cc1616;
+    background-color: #fff;
+  }
+  .navbar .navbar-toggler {
+    background-color: #fff;
+  }
+
+  .navbar .dropdown ul a:hover {
+    background-color: #cc1616;
+  }
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .navbar .dropdown .dropdown:hover > ul {
+    left: -100%;
+  }
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .navbar .dropdown .dropdown:hover > ul {
+    left: -100%;
+  }
+}
+
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: hidden;
+  list-style-type: none;
+  background-color: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+  color: #fff;
+}
+.navbar.dropdown ul a:hover {
+  background-color: #cc1616;
+  color: #fff;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  color: #191919;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul a:active,
+.navbar .dropdown ul li:hover > a {
+  color: #fff;
+}
+
+.navbar .dropdown:hover > ul {
+  opacity: 1;
+  top: 72px;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (min-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .navbar .dropdown .dropdown:hover > ul {
+    left: -100%;
+  }
+}
+/* hero*/
+#hero .scrolled-offest {
+  margin-top: 70px;
+}
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("./assets/img/hero-bg.jpg") top center;
+  position: relative;
+  background-size: cover;
+}
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #fff;
+}
+#hero .btn-get-start {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.4s ease-in-out;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  padding: 10px 28px;
+
+  border: 2px solid #fff;
+  color: #fff;
+}
+#hero .btn-get-start:hover {
+  border: 0;
+
+  background-color: #cc1616;
+  color: #fff;
+}
+#hero h2 {
+  color: #eee;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+@media screen and (max-width: 526px) {
+  #hero {
+    text-align: center;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+} /* about*/
+.about .content h3 {
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  padding-bottom: 10px;
+}
+
+.about .content ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #cc1616;
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+/* why-us*/
+.why-us .box {
+  padding: 50px 30px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  transition: all ease-in-out 0.3s;
+}
+.why-us .box:hover {
+  background: #cc1616;
+  padding: 30px 30px 70px 30px;
+  box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+}
+.why-us .box:hover span,
+.why-us .box:hover h4,
+.why-us .box:hover p {
+  color: #fff;
+}
+
+.why-us .box span {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ed5b5b;
+}
+.why-us .box h4 {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 0;
+  margin: 20px 0;
+  color: #191919;
+}
+.why-us.box p {
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+  color: #aaaaaa;
+  font-size: 15px;
+}
+/* market*/
+.market {
+  background: #f2f2f2;
+  padding: 15px 0;
+  text-align: center;
+}
+.market img {
+  width: 50%;
+  filter: grayscale(100);
+  transition: all 0.4s ease-in-out;
+  display: inline-block;
+  padding: 15px 0;
+}
+.market img:hover {
+  filter: none;
+  transform: scale(1.2);
+}
+/* services*/
+.section-title {
+  position: relative;
+  padding: 30px 0;
+  text-align: center;
+}
+.section-title span {
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  left: 0;
+  text-transform: uppercase;
+  color: #f4f4f4;
+  line-height: 0;
+  right: 0;
+  font-size: 38px;
+  font-weight: 700px;
+}
+.section-title h2 {
+  font-weight: 700;
+  text-transform: uppercase;
+
+  padding-bottom: 0;
+  color: #191919;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 575px) {
+  .section-title span {
+    font-size: 38px;
+  }
+}
+@media (max-width: 575px) {
+  .section-title h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+}
+.icon-box {
+  text-align: center;
+  padding: 50px 35px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  transition: all ease-in-out 0.3s;
+}
+.icon-box:hover {
+  background: #cc1616;
+  padding: 35px 35px 70px 35px;
+  box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+}
+
+.icon-box:hover h4,
+.icon-box:hover p {
+  color: #fff;
+}
+
+.services .icon-box .icon {
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  background: #cc1616;
+  transition: all 0.3s ease-out 0s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transform-style: preserve-3d;
+}
+.services .icon-box:hover .icon {
+  background: #fff;
+}
+
+.services .icon-box:hover .icon i {
+  color: #cc1616;
+}
+
+.icon-box .icon::before {
+  position: absolute;
+
+  content: "";
+  left: -8px;
+  top: -8px;
+  height: 100%;
+  width: 100%;
+  background: #fce5e5;
+  transition: all 0.3s ease-out 0s;
+  transform: translateZ(-2px);
+}
+.services .icon-box:hover .icon::before {
+  background: #e82d2d;
+}
+.services .icon-box .icon i {
+  color: #fff;
+  font-size: 28px;
+}
+
+.icon-box h4 {
+  color: #000;
+  font-weight: bold;
+}
+/*call*/
+.call {
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./assets/img/cta-bg.jpg) fixed center center;
+  background-size: cover;
+  padding: 120px 0;
+  margin-bottom: 80px;
+}
+
+.text-center {
+  color: #fff;
+  text-align: center;
+}
+.text-center h3 {
+  font-weight: 700px;
+  font-size: 28px;
+}
+
+.call .call-btn {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px;
+  transition: 0.5s;
+  margin-top: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+.call .call-btn:hover {
+  background-color: #cc1616;
+  border: 2px solid #cc1616;
+}
+/*footer*/
+.footer {
+  background-color: #000;
+  color: #fff;
+}
+.footer-info {
+  padding: 30px 20px;
+  border-top: 5px solid red;
+  text-align: center;
+  background: #191919;
+}
+.footer .footer-info h3 {
+  font-size: 36px;
+  margin: 0 0 20px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-weight: 700;
+}
+.footer .footer-info p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Raleway", sans-serif;
+}
+.footer .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #262626;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+.footer h4 {
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #fff;
+  position: relative;
+  padding-bottom: 12px;
+}
+.footer .footer-links {
+  margin-bottom: 30px;
+}
+.footer .footer-links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.footer .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+.footer .footer-links ul a {
+  color: #fff;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+.footer .footer-links ul a:hover {
+  color: red;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+.footer .footer-links ul i {
+  padding-right: 2px;
+  color: #ed5b5b;
+  font-size: 18px;
+  line-height: 1;
+  color: #cc1616;
+}
+
+.footer .footer-newsletter form {
+  margin-top: 30px;
+  background: #fff;
+  padding: 6px 30px;
+  position: relative;
+  border-radius: 4;
+}
+
+.footer .footer-newsletter form input[type="email"] {
+  border: 0;
+  padding: 4px;
+  width: calc(100% - 90px);
+}
+
+.footer .footer-newsletter form input[type="submit"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  padding: 0 20px;
+  background: #cc1616;
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 4;
+}
+
+.footer .footer-newsletter form input[type="submit"]:hover {
+  background: #e82d2d;
+}
+
+.footer .copyright {
+  text-align: center;
+  padding-top: 30px;
+}
+.footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+}
